@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */; };
-		8C473C8E1ECD10BA0015F3B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8D1ECD10BA0015F3B7 /* ViewController.swift */; };
+		8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */; };
 		8C473C911ECD10BA0015F3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */; };
 		8C473C931ECD10BA0015F3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C473C921ECD10BA0015F3B7 /* Assets.xcassets */; };
 		8C473C961ECD10BA0015F3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C473C941ECD10BA0015F3B7 /* LaunchScreen.storyboard */; };
 		8C473CA11ECD10BA0015F3B7 /* SmartTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CA01ECD10BA0015F3B7 /* SmartTagTests.swift */; };
 		8C473CAC1ECD10BA0015F3B7 /* SmartTagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CAB1ECD10BA0015F3B7 /* SmartTagUITests.swift */; };
+		8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		8C473C881ECD10BA0015F3B7 /* SmartTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C473C8D1ECD10BA0015F3B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		8C473C901ECD10BA0015F3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C473C921ECD10BA0015F3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C473C951ECD10BA0015F3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		8C473CA71ECD10BA0015F3B7 /* SmartTagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartTagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C473CAB1ECD10BA0015F3B7 /* SmartTagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTagUITests.swift; sourceTree = "<group>"; };
 		8C473CAD1ECD10BA0015F3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */,
-				8C473C8D1ECD10BA0015F3B7 /* ViewController.swift */,
+				8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */,
+				8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */,
 				8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */,
 				8C473C921ECD10BA0015F3B7 /* Assets.xcassets */,
 				8C473C941ECD10BA0015F3B7 /* LaunchScreen.storyboard */,
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C473C8E1ECD10BA0015F3B7 /* ViewController.swift in Sources */,
+				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
+				8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */,
 				8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
