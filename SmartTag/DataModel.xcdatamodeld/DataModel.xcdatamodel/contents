@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ReservationDate" representedClassName=".ReservationDate" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <relationship name="reservedInstances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReservationInstance" inverseName="date" inverseEntity="ReservationInstance" syncable="YES"/>
+    </entity>
+    <entity name="ReservationInstance" representedClassName=".ReservationInstance" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="date" maxCount="1" deletionRule="Nullify" destinationEntity="ReservationDate" inverseName="reservedInstances" inverseEntity="ReservationDate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ReservationDate" positionX="171" positionY="60" width="128" height="75"/>
+        <element name="ReservationInstance" positionX="-54" positionY="0" width="128" height="75"/>
+    </elements>
+</model>

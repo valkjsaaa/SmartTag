@@ -189,7 +189,7 @@
         <!--Reservation-->
         <scene sceneID="8lv-BB-l3T">
             <objects>
-                <viewController id="RSD-b3-KWz" sceneMemberID="viewController">
+                <viewController id="RSD-b3-KWz" customClass="ReservationViewController" customModule="SmartTag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q2f-qn-4Sz"/>
                         <viewControllerLayoutGuide type="bottom" id="7GM-4a-PcZ"/>
@@ -204,7 +204,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ZM0-OE-Mpt"/>
                                     <barButtonItem title="Adjust Time" id="jqs-iD-9FH">
                                         <connections>
-                                            <segue destination="5SB-4L-QqW" kind="popoverPresentation" popoverAnchorBarButtonItem="jqs-iD-9FH" id="Bo3-JI-o8Y">
+                                            <segue destination="5SB-4L-QqW" kind="popoverPresentation" identifier="ReservationPresentTimePicker" popoverAnchorBarButtonItem="jqs-iD-9FH" id="Bo3-JI-o8Y">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -238,6 +238,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Reservation" id="FNX-c8-o0H"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="Hfi-hZ-NGP" id="6vx-VV-V1R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waX-gE-O1m" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,10 +295,10 @@
             </objects>
             <point key="canvasLocation" x="934.57031249999989" y="3212.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Picker View Controller-->
         <scene sceneID="Kak-uV-x9m">
             <objects>
-                <viewController id="5SB-4L-QqW" sceneMemberID="viewController">
+                <viewController id="5SB-4L-QqW" customClass="TimePickerViewController" customModule="SmartTag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJ2-2B-pHW"/>
                         <viewControllerLayoutGuide type="bottom" id="5JU-yb-Ngy"/>
@@ -310,9 +313,16 @@
                                     <constraint firstAttribute="height" constant="40" id="kvE-JL-ja0"/>
                                 </constraints>
                                 <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="touchUpSet:" destination="5SB-4L-QqW" eventType="touchUpInside" id="RSY-r3-QVQ"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7S9-bs-CFJ">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="252"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5SB-4L-QqW" id="pJJ-aG-z1e"/>
+                                    <outlet property="delegate" destination="5SB-4L-QqW" id="ViV-Cn-OIq"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,6 +338,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="pickerView" destination="7S9-bs-CFJ" id="x2T-FK-KpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3Q-2f-Rab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,7 +350,7 @@
         <scene sceneID="1bB-0h-bPD">
             <objects>
                 <collectionViewController id="Bb7-Wn-YYL" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4dB-La-53H">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4dB-La-53H">
                         <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -365,7 +378,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vG-Eq-fDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515" y="1668"/>
+            <point key="canvasLocation" x="1435" y="1687"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JcZ-7z-UVE">
@@ -412,7 +425,7 @@
         <!--Delivery Manage-->
         <scene sceneID="ovV-31-6Kb">
             <objects>
-                <viewController id="5lI-So-eiT" sceneMemberID="viewController">
+                <viewController id="5lI-So-eiT" customClass="DelieveryViewController" customModule="SmartTag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4tG-Sh-2ck"/>
                         <viewControllerLayoutGuide type="bottom" id="lfU-84-HgG"/>
@@ -434,7 +447,7 @@
                                     <barButtonItem enabled="NO" title="Clear Selection" id="WXS-mN-5if"/>
                                     <barButtonItem title="Adjust Time" id="zDF-yq-ib9">
                                         <connections>
-                                            <segue destination="5SB-4L-QqW" kind="popoverPresentation" popoverAnchorBarButtonItem="zDF-yq-ib9" id="7TT-vb-aMJ">
+                                            <segue destination="5SB-4L-QqW" kind="popoverPresentation" identifier="DelieveryPresentTimePicker" popoverAnchorBarButtonItem="zDF-yq-ib9" id="7TT-vb-aMJ">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -467,6 +480,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Delivery Manage" id="FT2-Wb-GI3"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="Aze-Cg-GoR" id="KkU-el-fLs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdM-JH-Wtw" sceneMemberID="firstResponder"/>
             </objects>
@@ -641,7 +657,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXb-VQ-S1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339" y="2329"/>
+            <point key="canvasLocation" x="1365" y="2329"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VVI-zd-XvX">
@@ -688,7 +704,7 @@
         <image name="Image" width="1080" height="1051"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A0h-N5-Bxo"/>
         <segue reference="7TT-vb-aMJ"/>
+        <segue reference="A0h-N5-Bxo"/>
     </inferredMetricsTieBreakers>
 </document>

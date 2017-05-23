@@ -15,6 +15,12 @@
 		8C473CA11ECD10BA0015F3B7 /* SmartTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CA01ECD10BA0015F3B7 /* SmartTagTests.swift */; };
 		8C473CAC1ECD10BA0015F3B7 /* SmartTagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CAB1ECD10BA0015F3B7 /* SmartTagUITests.swift */; };
 		8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */; };
+		8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4A06D51ED2B326009FC6C4 /* DataModel.xcdatamodeld */; };
+		8CA618E31ED38D3A003F39D0 /* ReservationInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA618E21ED38D3A003F39D0 /* ReservationInstance.swift */; };
+		8CA618E51ED39429003F39D0 /* ReservationDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA618E41ED39429003F39D0 /* ReservationDate.swift */; };
+		8CA618E71ED39B12003F39D0 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA618E61ED39B12003F39D0 /* ReservationViewController.swift */; };
+		8CA618E91ED39B49003F39D0 /* DelieveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA618E81ED39B49003F39D0 /* DelieveryViewController.swift */; };
+		8CA618EB1ED39B88003F39D0 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA618EA1ED39B88003F39D0 /* TimePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		8C473CAB1ECD10BA0015F3B7 /* SmartTagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTagUITests.swift; sourceTree = "<group>"; };
 		8C473CAD1ECD10BA0015F3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		8C4A06D61ED2B326009FC6C4 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		8CA618E21ED38D3A003F39D0 /* ReservationInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInstance.swift; sourceTree = "<group>"; };
+		8CA618E41ED39429003F39D0 /* ReservationDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationDate.swift; sourceTree = "<group>"; };
+		8CA618E61ED39B12003F39D0 /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		8CA618E81ED39B49003F39D0 /* DelieveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelieveryViewController.swift; sourceTree = "<group>"; };
+		8CA618EA1ED39B88003F39D0 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,14 @@
 		8C473C8A1ECD10BA0015F3B7 /* SmartTag */ = {
 			isa = PBXGroup;
 			children = (
+				8CA618E11ED38D25003F39D0 /* Controller */,
+				8CA618E01ED38D16003F39D0 /* Model */,
 				8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */,
-				8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */,
-				8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */,
 				8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */,
 				8C473C921ECD10BA0015F3B7 /* Assets.xcassets */,
 				8C473C941ECD10BA0015F3B7 /* LaunchScreen.storyboard */,
 				8C473C971ECD10BA0015F3B7 /* Info.plist */,
+				8C4A06D51ED2B326009FC6C4 /* DataModel.xcdatamodeld */,
 			);
 			path = SmartTag;
 			sourceTree = "<group>";
@@ -126,6 +139,27 @@
 				8C473CAD1ECD10BA0015F3B7 /* Info.plist */,
 			);
 			path = SmartTagUITests;
+			sourceTree = "<group>";
+		};
+		8CA618E01ED38D16003F39D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CA618E21ED38D3A003F39D0 /* ReservationInstance.swift */,
+				8CA618E41ED39429003F39D0 /* ReservationDate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8CA618E11ED38D25003F39D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */,
+				8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */,
+				8CA618E61ED39B12003F39D0 /* ReservationViewController.swift */,
+				8CA618E81ED39B49003F39D0 /* DelieveryViewController.swift */,
+				8CA618EA1ED39B88003F39D0 /* TimePickerViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA618E91ED39B49003F39D0 /* DelieveryViewController.swift in Sources */,
 				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
+				8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */,
+				8CA618E51ED39429003F39D0 /* ReservationDate.swift in Sources */,
+				8CA618EB1ED39B88003F39D0 /* TimePickerViewController.swift in Sources */,
 				8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */,
+				8CA618E31ED38D3A003F39D0 /* ReservationInstance.swift in Sources */,
+				8CA618E71ED39B12003F39D0 /* ReservationViewController.swift in Sources */,
 				8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +560,7 @@
 				8C473CB21ECD10BA0015F3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C473CB31ECD10BA0015F3B7 /* Build configuration list for PBXNativeTarget "SmartTagTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +569,7 @@
 				8C473CB51ECD10BA0015F3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C473CB61ECD10BA0015F3B7 /* Build configuration list for PBXNativeTarget "SmartTagUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,8 +578,22 @@
 				8C473CB81ECD10BA0015F3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C4A06D51ED2B326009FC6C4 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C4A06D61ED2B326009FC6C4 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 8C4A06D61ED2B326009FC6C4 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C473C801ECD10BA0015F3B7 /* Project object */;
 }
