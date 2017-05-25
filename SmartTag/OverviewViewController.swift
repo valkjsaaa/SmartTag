@@ -10,6 +10,7 @@ import UIKit
 class OverviewViewController: UIViewController {
     
     let presentSigninViewSegueIdentifier = "presentSigninView"
+    let embedMapsViewControllerSegueIdentifier = "embedMapsViewController"
     
     var signedIn = false
     

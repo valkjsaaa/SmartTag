@@ -15,20 +15,6 @@ class SigninViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        for hour in [8, 10, 12, 14, 16] {
-//            var dateComponents = DateComponents.init()
-//            dateComponents.day = 24
-//            dateComponents.month = 5
-//            dateComponents.year = 2017
-//            dateComponents.hour = hour
-//            dateComponents.minute = 0
-//            dateComponents.second = 0
-//            let date = Calendar.autoupdatingCurrent.date(from: dateComponents)!
-//            let reservationDate = ReservationDate(context: managedObjectContext)
-//            reservationDate.date = date
-//        }
-//        try! managedObjectContext.save()
     }
 
     override func didReceiveMemoryWarning() {

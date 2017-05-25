@@ -42,7 +42,7 @@ extension ReservationDate {
     
     @NSManaged public var date: Date?
     @NSManaged public var reservedInstances: Set<ReservationInstance>?
-    
+    @NSManaged public var reservedDelivery: Set<ReservationDelivery>?
 }
 
 // MARK: Generated accessors for reservedInstances
@@ -59,6 +59,23 @@ extension ReservationDate {
     
     @objc(removeReservedInstances:)
     @NSManaged public func removeFromReservedInstances(_ values: Set<ReservationInstance>)
+    
+}
+
+// MARK: Generated accessors for reservedDelivery
+extension ReservationDate {
+    
+    @objc(addReservedDeliveryObject:)
+    @NSManaged public func addToReservedDelivery(_ value: ReservationDelivery)
+    
+    @objc(removeReservedDeliveryObject:)
+    @NSManaged public func removeFromReservedDelivery(_ value: ReservationDelivery)
+    
+    @objc(addReservedDelivery:)
+    @NSManaged public func addToReservedDelivery(_ values: NSSet)
+    
+    @objc(removeReservedDelivery:)
+    @NSManaged public func removeFromReservedDelivery(_ values: NSSet)
     
 }
 

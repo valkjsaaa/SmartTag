@@ -14,8 +14,10 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
 
     let presentTimePickerSegueIdentifier = "ReservationPresentTimePicker"
+    let embedMapsViewControllerSegueIdentifier = "embedMapsViewController"
     
     var managedObjectContext: NSManagedObjectContext!
+    var mapsViewController: MapsViewController!
     
     var currentDate: ReservationDate?;
 
@@ -44,6 +46,10 @@ class ReservationViewController: UIViewController {
                 timePickerViewController.delegate = self
             }
         }
+        if segue.identifier == embedMapsViewControllerSegueIdentifier {
+            mapsViewController = segue.destination as! MapsViewController
+            mapsViewController.delegate = self
+        }
     }
 
 }
@@ -63,6 +69,17 @@ extension ReservationViewController: TimePickerDelegate {
             }
             timeLabel.text = "Time: " + dateString
             self.currentDate = newDate
+            self.mapsViewController.date = newDate
         }
+    }
+}
+
+extension ReservationViewController: MapsViewDelegate {
+    var initialGridLineShown: Bool {
+        return true
+    }
+    
+    var initialDate: ReservationDate {
+        return self.currentDate!
     }
 }

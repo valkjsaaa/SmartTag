@@ -14,8 +14,10 @@ class DelieveryViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     let presentTimePickerSegueIdentifier = "DelieveryPresentTimePicker"
+    let embedMapsViewControllerSegueIdentifier = "embedMapsViewController"
     
     var managedObjectContext: NSManagedObjectContext!
+    var mapsViewController: MapsViewController!
     
     var currentDate: ReservationDate?;
     
@@ -44,6 +46,10 @@ class DelieveryViewController: UIViewController {
                 timePickerViewController.delegate = self
             }
         }
+        if segue.identifier == embedMapsViewControllerSegueIdentifier {
+            mapsViewController = segue.destination as! MapsViewController
+            mapsViewController.delegate = self
+        }
     }
 }
 
@@ -62,6 +68,18 @@ extension DelieveryViewController: TimePickerDelegate {
             }
             timeLabel.text = "Time: " + dateString
             self.currentDate = newDate
+            self.mapsViewController.date = newDate
         }
     }
 }
+
+extension DelieveryViewController: MapsViewDelegate {
+    var initialDeliveryShown: Bool {
+        return true
+    }
+    
+    var initialDate: ReservationDate {
+        return self.currentDate!
+    }
+}
+
