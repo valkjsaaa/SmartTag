@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        createDatabase()
         // Override point for customization after application launch.
         return true
     }
@@ -71,6 +72,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    func createDatabase() {
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationInstance.fetchRequest()))
+        try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationDelivery.fetchRequest()))
+        try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationDate.fetchRequest()))
+        
+        for hour in [8, 10, 12, 14, 16] {
+            var dateComponents = DateComponents.init()
+            dateComponents.day = 24
+            dateComponents.month = 5
+            dateComponents.year = 2017
+            dateComponents.hour = hour
+            dateComponents.minute = 0
+            dateComponents.second = 0
+            let date = Calendar.autoupdatingCurrent.date(from: dateComponents)!
+            let reservationDate = ReservationDate(context: managedObjectContext)
+            reservationDate.date = date
+        }
+        try! managedObjectContext.save()
+    }
     
     // MARK: - Core Data Saving support
     

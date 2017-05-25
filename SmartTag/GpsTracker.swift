@@ -46,7 +46,9 @@ class GpsTracker {
         objc_sync_enter(delegates)
         print("Tracker \(deviceName ?? "NO NAME") location updated to (\(latitude ?? 0.0), \(longitude ?? 0.0))!")
         for delegate in delegates {
-            delegate.updateLocation(latitude: latitude, longitude: longitude, locationAvailable: locationAvailable, deviceName: deviceName!)
+            DispatchQueue.main.async {
+                delegate.updateLocation(latitude: self.latitude, longitude: self.longitude, locationAvailable: self.locationAvailable, deviceName: self.deviceName!)
+            }
         }
         objc_sync_exit(delegates)
     }

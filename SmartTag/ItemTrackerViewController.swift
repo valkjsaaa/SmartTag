@@ -58,6 +58,12 @@ class ItemTrackerViewController: UIViewController {
         objc_sync_enter(self.gpsTracker.delegates)
         self.gpsTracker.delegates.append(self)
         objc_sync_exit(self.gpsTracker.delegates)
+        if let longitude = self.gpsTracker.longitude {
+            self.longitude = longitude
+        }
+        if let latitude = self.gpsTracker.latitude {
+            self.latitude = latitude
+        }
     }
     
     deinit {
