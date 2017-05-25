@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C464A06D8BBAFCBAABD8EEA /* Pods_SmartTag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6477EE59CA3F1248C803F06F /* Pods_SmartTag.framework */; };
+		78128B6FD362F58DF8D2056B /* Pods_SmartTagTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27891C653B28928F9DBC2C6B /* Pods_SmartTagTests.framework */; };
+		7F9234033C9C7D8C6D847BF3 /* Pods_SmartTagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BD8C8CD6C2C1F8825DE4EA /* Pods_SmartTagUITests.framework */; };
 		8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56CE1ED6524C0007375F /* StatePickerViewController.swift */; };
 		8C2C56D11ED6E03F0007375F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */; };
 		8C2C56D51ED6E1740007375F /* DashBoardSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */; };
@@ -14,6 +17,8 @@
 		8C2C56D91ED6FA490007375F /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D81ED6FA490007375F /* DebugViewController.swift */; };
 		8C2C56DC1ED6FF2E0007375F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2C56DB1ED6FF2E0007375F /* MapKit.framework */; };
 		8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */; };
+		8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243C1ED703AB0079DE1F /* GpsTracker.swift */; };
+		8C42243F1ED707B20079DE1F /* GpsTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */; };
 		8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */; };
 		8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */; };
 		8C473C911ECD10BA0015F3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */; };
@@ -49,6 +54,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03C45AD515557107941AB8D8 /* Pods-SmartTagUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTagUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTagUITests/Pods-SmartTagUITests.release.xcconfig"; sourceTree = "<group>"; };
+		09BD8C8CD6C2C1F8825DE4EA /* Pods_SmartTagUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTagUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27891C653B28928F9DBC2C6B /* Pods_SmartTagTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTagTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33967E58D09C90E9FE3729CA /* Pods-SmartTagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTagTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTagTests/Pods-SmartTagTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E39A80B693F5960878CF0F8 /* Pods-SmartTagUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTagUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTagUITests/Pods-SmartTagUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55ACDFEBF68354947E6F64B0 /* Pods-SmartTagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTagTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTagTests/Pods-SmartTagTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6477EE59CA3F1248C803F06F /* Pods_SmartTag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7340E6E593C59166E1F11B8D /* Pods-SmartTag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTag/Pods-SmartTag.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2C56CE1ED6524C0007375F /* StatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePickerViewController.swift; sourceTree = "<group>"; };
 		8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +69,8 @@
 		8C2C56D81ED6FA490007375F /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		8C2C56DB1ED6FF2E0007375F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTrackerViewController.swift; sourceTree = "<group>"; };
+		8C42243C1ED703AB0079DE1F /* GpsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTracker.swift; sourceTree = "<group>"; };
+		8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTrackerManager.swift; sourceTree = "<group>"; };
 		8C473C881ECD10BA0015F3B7 /* SmartTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +92,7 @@
 		8CA618E81ED39B49003F39D0 /* DelieveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelieveryViewController.swift; sourceTree = "<group>"; };
 		8CA618EA1ED39B88003F39D0 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		8CA618EE1ED408E7003F39D0 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		91B9C3158CE993EDD0B63206 /* Pods-SmartTag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTag.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTag/Pods-SmartTag.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2C56DC1ED6FF2E0007375F /* MapKit.framework in Frameworks */,
+				0C464A06D8BBAFCBAABD8EEA /* Pods_SmartTag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78128B6FD362F58DF8D2056B /* Pods_SmartTagTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,16 +117,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9234033C9C7D8C6D847BF3 /* Pods_SmartTagUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C108D53B6AB3B3158BF9AE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7340E6E593C59166E1F11B8D /* Pods-SmartTag.debug.xcconfig */,
+				91B9C3158CE993EDD0B63206 /* Pods-SmartTag.release.xcconfig */,
+				55ACDFEBF68354947E6F64B0 /* Pods-SmartTagTests.debug.xcconfig */,
+				33967E58D09C90E9FE3729CA /* Pods-SmartTagTests.release.xcconfig */,
+				4E39A80B693F5960878CF0F8 /* Pods-SmartTagUITests.debug.xcconfig */,
+				03C45AD515557107941AB8D8 /* Pods-SmartTagUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8C2C56DA1ED6FF2E0007375F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8C2C56DB1ED6FF2E0007375F /* MapKit.framework */,
+				6477EE59CA3F1248C803F06F /* Pods_SmartTag.framework */,
+				27891C653B28928F9DBC2C6B /* Pods_SmartTagTests.framework */,
+				09BD8C8CD6C2C1F8825DE4EA /* Pods_SmartTagUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +156,7 @@
 				8C473CAA1ECD10BA0015F3B7 /* SmartTagUITests */,
 				8C473C891ECD10BA0015F3B7 /* Products */,
 				8C2C56DA1ED6FF2E0007375F /* Frameworks */,
+				8C108D53B6AB3B3158BF9AE9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +209,8 @@
 				8CA618E21ED38D3A003F39D0 /* ReservationInstance.swift */,
 				8CA618E41ED39429003F39D0 /* ReservationDate.swift */,
 				8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */,
+				8C42243C1ED703AB0079DE1F /* GpsTracker.swift */,
+				8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C473CB01ECD10BA0015F3B7 /* Build configuration list for PBXNativeTarget "SmartTag" */;
 			buildPhases = (
+				CC99DBD226E6224CCF43D57D /* [CP] Check Pods Manifest.lock */,
 				8C473C841ECD10BA0015F3B7 /* Sources */,
 				8C473C851ECD10BA0015F3B7 /* Frameworks */,
 				8C473C861ECD10BA0015F3B7 /* Resources */,
+				5823B794456E9961DAA3F78F /* [CP] Embed Pods Frameworks */,
+				378F989C363FA286DC4F2B18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C473CB31ECD10BA0015F3B7 /* Build configuration list for PBXNativeTarget "SmartTagTests" */;
 			buildPhases = (
+				2973589E17F10EEA0982FDA2 /* [CP] Check Pods Manifest.lock */,
 				8C473C981ECD10BA0015F3B7 /* Sources */,
 				8C473C991ECD10BA0015F3B7 /* Frameworks */,
 				8C473C9A1ECD10BA0015F3B7 /* Resources */,
+				68466CD5B4F9BC89D41651BA /* [CP] Embed Pods Frameworks */,
+				8D1EF382C94455600846B2CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C473CB61ECD10BA0015F3B7 /* Build configuration list for PBXNativeTarget "SmartTagUITests" */;
 			buildPhases = (
+				D568397AA06EAADE88B66466 /* [CP] Check Pods Manifest.lock */,
 				8C473CA31ECD10BA0015F3B7 /* Sources */,
 				8C473CA41ECD10BA0015F3B7 /* Frameworks */,
 				8C473CA51ECD10BA0015F3B7 /* Resources */,
+				65D57A6237A5FA5EA3FA88C1 /* [CP] Embed Pods Frameworks */,
+				41ADD91E482E8AF027E6EDFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +379,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2973589E17F10EEA0982FDA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		378F989C363FA286DC4F2B18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTag/Pods-SmartTag-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41ADD91E482E8AF027E6EDFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTagUITests/Pods-SmartTagUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5823B794456E9961DAA3F78F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTag/Pods-SmartTag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65D57A6237A5FA5EA3FA88C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTagUITests/Pods-SmartTagUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68466CD5B4F9BC89D41651BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTagTests/Pods-SmartTagTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D1EF382C94455600846B2CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartTagTests/Pods-SmartTagTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC99DBD226E6224CCF43D57D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D568397AA06EAADE88B66466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C473C841ECD10BA0015F3B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -339,6 +524,7 @@
 			files = (
 				8CA618E91ED39B49003F39D0 /* DelieveryViewController.swift in Sources */,
 				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
+				8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */,
 				8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */,
 				8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */,
 				8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */,
@@ -351,6 +537,7 @@
 				8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */,
 				8CA618E31ED38D3A003F39D0 /* ReservationInstance.swift in Sources */,
 				8CA618E71ED39B12003F39D0 /* ReservationViewController.swift in Sources */,
+				8C42243F1ED707B20079DE1F /* GpsTrackerManager.swift in Sources */,
 				8C2C56D71ED6F2590007375F /* DeliveryInstance.swift in Sources */,
 				8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */,
 			);
@@ -504,6 +691,7 @@
 		};
 		8C473CB11ECD10BA0015F3B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7340E6E593C59166E1F11B8D /* Pods-SmartTag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H4758Q57R4;
@@ -517,6 +705,7 @@
 		};
 		8C473CB21ECD10BA0015F3B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B9C3158CE993EDD0B63206 /* Pods-SmartTag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H4758Q57R4;
@@ -530,6 +719,7 @@
 		};
 		8C473CB41ECD10BA0015F3B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55ACDFEBF68354947E6F64B0 /* Pods-SmartTagTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +735,7 @@
 		};
 		8C473CB51ECD10BA0015F3B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33967E58D09C90E9FE3729CA /* Pods-SmartTagTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,6 +751,7 @@
 		};
 		8C473CB71ECD10BA0015F3B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E39A80B693F5960878CF0F8 /* Pods-SmartTagUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H4758Q57R4;
@@ -574,6 +766,7 @@
 		};
 		8C473CB81ECD10BA0015F3B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C45AD515557107941AB8D8 /* Pods-SmartTagUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H4758Q57R4;
