@@ -250,7 +250,7 @@
         <!--Item Tracking-->
         <scene sceneID="pqM-b6-ywv">
             <objects>
-                <viewController id="SYm-6h-Ujw" sceneMemberID="viewController">
+                <viewController id="SYm-6h-Ujw" customClass="ItemTrackerViewController" customModule="SmartTag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="id3-cu-ELj"/>
                         <viewControllerLayoutGuide type="bottom" id="0L8-Ag-TyZ"/>
@@ -278,23 +278,33 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-yr-Urv">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="655"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ahb-Fh-Oni" firstAttribute="leading" secondItem="Z2P-lU-TGq" secondAttribute="leading" id="0X8-Ef-kcp"/>
+                            <constraint firstItem="ahb-Fh-Oni" firstAttribute="top" secondItem="UcS-yr-Urv" secondAttribute="bottom" id="6GC-Px-KhV"/>
+                            <constraint firstItem="UcS-yr-Urv" firstAttribute="top" secondItem="id3-cu-ELj" secondAttribute="bottom" id="N1S-00-Uha"/>
                             <constraint firstAttribute="trailing" secondItem="ahb-Fh-Oni" secondAttribute="trailing" id="P9V-SF-PmW"/>
                             <constraint firstAttribute="trailing" secondItem="spt-kt-57d" secondAttribute="trailing" id="WFc-wr-wBF"/>
                             <constraint firstItem="0L8-Ag-TyZ" firstAttribute="top" secondItem="ahb-Fh-Oni" secondAttribute="bottom" id="dpZ-WT-vyM"/>
+                            <constraint firstItem="UcS-yr-Urv" firstAttribute="leading" secondItem="Z2P-lU-TGq" secondAttribute="leading" id="huh-Hh-p3p"/>
                             <constraint firstItem="spt-kt-57d" firstAttribute="top" secondItem="id3-cu-ELj" secondAttribute="bottom" id="mko-zy-r7S"/>
                             <constraint firstItem="ahb-Fh-Oni" firstAttribute="top" secondItem="spt-kt-57d" secondAttribute="bottom" id="pYv-o6-a7R"/>
+                            <constraint firstAttribute="trailing" secondItem="UcS-yr-Urv" secondAttribute="trailing" id="wE6-Im-InS"/>
                             <constraint firstItem="spt-kt-57d" firstAttribute="leading" secondItem="Z2P-lU-TGq" secondAttribute="leading" id="wqe-ff-dpb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item Tracking" image="Tracking" id="VRA-pr-EgE"/>
+                    <connections>
+                        <outlet property="realMapView" destination="UcS-yr-Urv" id="BvK-Vs-Bbe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KR9-zp-MqJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="3166"/>
+            <point key="canvasLocation" x="860.7421875" y="3165.625"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="Kak-uV-x9m">

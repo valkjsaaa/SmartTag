@@ -12,6 +12,8 @@
 		8C2C56D51ED6E1740007375F /* DashBoardSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */; };
 		8C2C56D71ED6F2590007375F /* DeliveryInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */; };
 		8C2C56D91ED6FA490007375F /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D81ED6FA490007375F /* DebugViewController.swift */; };
+		8C2C56DC1ED6FF2E0007375F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2C56DB1ED6FF2E0007375F /* MapKit.framework */; };
+		8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */; };
 		8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */; };
 		8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */; };
 		8C473C911ECD10BA0015F3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardSettingsTableViewController.swift; sourceTree = "<group>"; };
 		8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryInstance.swift; sourceTree = "<group>"; };
 		8C2C56D81ED6FA490007375F /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		8C2C56DB1ED6FF2E0007375F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTrackerViewController.swift; sourceTree = "<group>"; };
 		8C473C881ECD10BA0015F3B7 /* SmartTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C473C8D1ECD10BA0015F3B7 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2C56DC1ED6FF2E0007375F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2C56DA1ED6FF2E0007375F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2C56DB1ED6FF2E0007375F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C473C7F1ECD10BA0015F3B7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 				8C473C9F1ECD10BA0015F3B7 /* SmartTagTests */,
 				8C473CAA1ECD10BA0015F3B7 /* SmartTagUITests */,
 				8C473C891ECD10BA0015F3B7 /* Products */,
+				8C2C56DA1ED6FF2E0007375F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +190,7 @@
 				8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */,
 				8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */,
 				8C2C56D81ED6FA490007375F /* DebugViewController.swift */,
+				8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -250,6 +265,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = H4758Q57R4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8C473C9B1ECD10BA0015F3B7 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -321,6 +341,7 @@
 				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
 				8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */,
 				8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */,
+				8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */,
 				8CA618E51ED39429003F39D0 /* ReservationDate.swift in Sources */,
 				8CA618EB1ED39B88003F39D0 /* TimePickerViewController.swift in Sources */,
 				8CA618EF1ED408E7003F39D0 /* MapsViewController.swift in Sources */,
