@@ -1,4 +1,4 @@
-
+//
 //  AppDelegate.swift
 //  SmartTag
 //
@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Spark_SDK
+import Darwin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -75,9 +76,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func createDatabase() {
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        try! managedObjectContext.save()
         try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationInstance.fetchRequest()))
         try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationDelivery.fetchRequest()))
         try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: ReservationDate.fetchRequest()))
+        try! managedObjectContext.execute(NSBatchDeleteRequest(fetchRequest: TrackedItem.fetchRequest()))
         
         for hour in [8, 10, 12, 14, 16] {
             var dateComponents = DateComponents.init()
@@ -90,6 +93,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let date = Calendar.autoupdatingCurrent.date(from: dateComponents)!
             let reservationDate = ReservationDate(context: managedObjectContext)
             reservationDate.date = date
+            for i in 0..<16 {
+                for j in 0..<16 {
+                    let reservedInstance = ReservationInstance(context: managedObjectContext)
+                    reservedInstance.x = Int16(i)
+                    reservedInstance.y = Int16(j)
+                    reservedInstance.type = .Available
+                    reservedInstance.date = reservationDate
+                    reservedInstance.priorityCode = 0
+                    reservedInstance.information = ""
+                    reservedInstance.request = ""
+                }
+            }
+            for i in 0..<3 {
+                let reservedDelivery = ReservationDelivery(context: managedObjectContext)
+                reservedDelivery.which = Int16(i)
+                reservedDelivery.type = .Available
+                reservedDelivery.date = reservationDate
+                reservedDelivery.priorityCode = 0
+            }
+        }
+        for _ in 0..<10 {
+            let item = TrackedItem(context: managedObjectContext)
+            item.latitude = Float(drand48() * TrackedItem.maxLatitude)
+            item.longitude = Float(drand48() * TrackedItem.maxLongtitude)
+            item.mine = Bool(arc4random_uniform(2) == 1)
+            item.toMove = Bool(arc4random_uniform(2) == 1)
+            item.urgent = Bool(arc4random_uniform(2) == 1)
         }
         try! managedObjectContext.save()
     }

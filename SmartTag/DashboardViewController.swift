@@ -19,6 +19,7 @@ class DashboardViewController: UIViewController {
     var internalShowMyItems = false
     var internalShowItmesToMove = false
     var internalAddGridLines = false
+    var internalShowItems = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +50,24 @@ class DashboardViewController: UIViewController {
 }
 
 extension DashboardViewController: DashBoardSettingsTableViewDelegate {
+    var showItems: Bool {
+        get {
+            return self.internalShowItems
+        }
+        set(newShowItems) {
+            self.internalShowItems = newShowItems
+            self.mapsViewController.showItmes = newShowItems
+        }
+    }
+    
     var showCriticalItems: Bool {
         get {
             return self.internalShowCriticalItems
         }
         set(newShowCriticalItems) {
             self.internalShowCriticalItems = newShowCriticalItems
+            self.mapsViewController.showCriticalItems = newShowCriticalItems
+            self.mapsViewController.refreshTrackedItems()
         }
     }
     var showMyItems: Bool {
@@ -63,6 +76,8 @@ extension DashboardViewController: DashBoardSettingsTableViewDelegate {
         }
         set(newShowMyItems) {
             self.internalShowMyItems = newShowMyItems
+            self.mapsViewController.showMyItems = newShowMyItems
+            self.mapsViewController.refreshTrackedItems()
         }
     }
     var showItemsToMove: Bool {
@@ -71,8 +86,11 @@ extension DashboardViewController: DashBoardSettingsTableViewDelegate {
         }
         set(newShowItemsToMove) {
             self.internalShowMyItems = newShowItemsToMove
+            self.mapsViewController.showItemsToMove = newShowItemsToMove
+            self.mapsViewController.refreshTrackedItems()
         }
     }
+
     var addGridLines: Bool {
         get {
             return internalAddGridLines
@@ -82,5 +100,10 @@ extension DashboardViewController: DashBoardSettingsTableViewDelegate {
             self.mapsViewController.showGridLines = newAddGridLines
         }
     }
-    
+
+    var dashboard: Bool {
+        get {
+            return true
+        }
+    }
 }

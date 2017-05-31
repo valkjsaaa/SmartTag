@@ -7,19 +7,31 @@
         <relationship name="reservedInstances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReservationInstance" inverseName="date" inverseEntity="ReservationInstance" syncable="YES"/>
     </entity>
     <entity name="ReservationDelivery" representedClassName="ReservationDelivery" syncable="YES">
+        <attribute name="priorityCode" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="which" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="date" maxCount="1" deletionRule="Nullify" destinationEntity="ReservationDate" inverseName="reservedDelivery" inverseEntity="ReservationDate" syncable="YES"/>
     </entity>
     <entity name="ReservationInstance" representedClassName=".ReservationInstance" syncable="YES">
+        <attribute name="information" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priorityCode" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="request" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="x" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
         <attribute name="y" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
         <relationship name="date" maxCount="1" deletionRule="Nullify" destinationEntity="ReservationDate" inverseName="reservedInstances" inverseEntity="ReservationDate" syncable="YES"/>
     </entity>
+    <entity name="TrackedItem" representedClassName="TrackedItem" syncable="YES" codeGenerationType="category">
+        <attribute name="latitude" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mine" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="toMove" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="urgent" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="ReservationDate" positionX="171" positionY="60" width="128" height="105"/>
-        <element name="ReservationInstance" positionX="-54" positionY="0" width="128" height="105"/>
-        <element name="ReservationDelivery" positionX="63" positionY="63" width="128" height="90"/>
+        <element name="ReservationDelivery" positionX="63" positionY="63" width="128" height="105"/>
+        <element name="ReservationInstance" positionX="-54" positionY="0" width="128" height="150"/>
+        <element name="TrackedItem" positionX="63" positionY="72" width="128" height="120"/>
     </elements>
 </model>

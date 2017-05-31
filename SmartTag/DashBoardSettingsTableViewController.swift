@@ -16,6 +16,7 @@ class DashBoardSettingsTableViewController: UITableViewController {
     @IBOutlet weak var showMyItemsSwitch: UISwitch!
     @IBOutlet weak var showItemsToMoveSwitch: UISwitch!
     @IBOutlet weak var addGridLinesSwitch: UISwitch!
+    @IBOutlet weak var showTrackedItems: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class DashBoardSettingsTableViewController: UITableViewController {
         self.showMyItemsSwitch.isOn = self.delegate.showMyItems
         self.showItemsToMoveSwitch.isOn = self.delegate.showItemsToMove
         self.addGridLinesSwitch.isOn = self.delegate.addGridLines
+        self.showTrackedItems.isOn = self.delegate.showItems
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +48,16 @@ class DashBoardSettingsTableViewController: UITableViewController {
         self.delegate.addGridLines = sender.isOn
     }
     
+    @IBAction func showTrackedItemsChanged(_ sender: UISwitch) {
+        self.delegate.showItems = sender.isOn
+    }
+    
 }
 
 protocol DashBoardSettingsTableViewDelegate {
+    var showItems: Bool {
+        set get
+    }
     var showCriticalItems: Bool {
         get set
     }

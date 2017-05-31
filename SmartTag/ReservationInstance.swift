@@ -44,5 +44,7 @@ extension ReservationInstance {
     @NSManaged public var x: Int16
     @NSManaged public var y: Int16
     @NSManaged public var date: ReservationDate?
-    
+    @NSManaged public var priorityCode: Int16
+    @NSManaged public var information: String
+    @NSManaged public var request: String
 }

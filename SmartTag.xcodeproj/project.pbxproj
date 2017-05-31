@@ -10,13 +10,19 @@
 		0C464A06D8BBAFCBAABD8EEA /* Pods_SmartTag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6477EE59CA3F1248C803F06F /* Pods_SmartTag.framework */; };
 		78128B6FD362F58DF8D2056B /* Pods_SmartTagTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27891C653B28928F9DBC2C6B /* Pods_SmartTagTests.framework */; };
 		7F9234033C9C7D8C6D847BF3 /* Pods_SmartTagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BD8C8CD6C2C1F8825DE4EA /* Pods_SmartTagUITests.framework */; };
+		8C23AE2F1EDE478200CD212A /* ReserveDelieveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23AE2E1EDE478200CD212A /* ReserveDelieveryViewController.swift */; };
+		8C23AE311EDE87FC00CD212A /* TrackedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23AE301EDE87FC00CD212A /* TrackedItem.swift */; };
+		8C23AE331EDE8D2C00CD212A /* DashBoardSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C23AE321EDE8D2C00CD212A /* DashBoardSettingsTableViewController.swift */; };
 		8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56CE1ED6524C0007375F /* StatePickerViewController.swift */; };
 		8C2C56D11ED6E03F0007375F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */; };
-		8C2C56D51ED6E1740007375F /* DashBoardSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */; };
-		8C2C56D71ED6F2590007375F /* DeliveryInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */; };
+		8C2C56D71ED6F2590007375F /* ReservationDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D61ED6F2590007375F /* ReservationDelivery.swift */; };
 		8C2C56D91ED6FA490007375F /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56D81ED6FA490007375F /* DebugViewController.swift */; };
 		8C2C56DC1ED6FF2E0007375F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2C56DB1ED6FF2E0007375F /* MapKit.framework */; };
 		8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */; };
+		8C33AD411EDD41C4001C5BD7 /* ReserveInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD401EDD41C4001C5BD7 /* ReserveInstanceViewController.swift */; };
+		8C33AD451EDD4729001C5BD7 /* ReservationDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD441EDD4729001C5BD7 /* ReservationDatePickerViewController.swift */; };
+		8C33AD471EDD4739001C5BD7 /* ReservationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD461EDD4739001C5BD7 /* ReservationInformationViewController.swift */; };
+		8C33AD491EDD4756001C5BD7 /* ReservationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD481EDD4756001C5BD7 /* ReservationRequestViewController.swift */; };
 		8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243C1ED703AB0079DE1F /* GpsTracker.swift */; };
 		8C42243F1ED707B20079DE1F /* GpsTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */; };
 		8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */; };
@@ -62,13 +68,19 @@
 		55ACDFEBF68354947E6F64B0 /* Pods-SmartTagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTagTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTagTests/Pods-SmartTagTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6477EE59CA3F1248C803F06F /* Pods_SmartTag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartTag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7340E6E593C59166E1F11B8D /* Pods-SmartTag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartTag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartTag/Pods-SmartTag.debug.xcconfig"; sourceTree = "<group>"; };
+		8C23AE2E1EDE478200CD212A /* ReserveDelieveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveDelieveryViewController.swift; sourceTree = "<group>"; };
+		8C23AE301EDE87FC00CD212A /* TrackedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackedItem.swift; sourceTree = "<group>"; };
+		8C23AE321EDE8D2C00CD212A /* DashBoardSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardSettingsTableViewController.swift; sourceTree = "<group>"; };
 		8C2C56CE1ED6524C0007375F /* StatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePickerViewController.swift; sourceTree = "<group>"; };
 		8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardSettingsTableViewController.swift; sourceTree = "<group>"; };
-		8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryInstance.swift; sourceTree = "<group>"; };
+		8C2C56D61ED6F2590007375F /* ReservationDelivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationDelivery.swift; sourceTree = "<group>"; };
 		8C2C56D81ED6FA490007375F /* DebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		8C2C56DB1ED6FF2E0007375F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTrackerViewController.swift; sourceTree = "<group>"; };
+		8C33AD401EDD41C4001C5BD7 /* ReserveInstanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveInstanceViewController.swift; sourceTree = "<group>"; };
+		8C33AD441EDD4729001C5BD7 /* ReservationDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationDatePickerViewController.swift; sourceTree = "<group>"; };
+		8C33AD461EDD4739001C5BD7 /* ReservationInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInformationViewController.swift; sourceTree = "<group>"; };
+		8C33AD481EDD4756001C5BD7 /* ReservationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationRequestViewController.swift; sourceTree = "<group>"; };
 		8C42243C1ED703AB0079DE1F /* GpsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTracker.swift; sourceTree = "<group>"; };
 		8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTrackerManager.swift; sourceTree = "<group>"; };
 		8C473C881ECD10BA0015F3B7 /* SmartTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,9 +220,10 @@
 			children = (
 				8CA618E21ED38D3A003F39D0 /* ReservationInstance.swift */,
 				8CA618E41ED39429003F39D0 /* ReservationDate.swift */,
-				8C2C56D61ED6F2590007375F /* DeliveryInstance.swift */,
+				8C2C56D61ED6F2590007375F /* ReservationDelivery.swift */,
 				8C42243C1ED703AB0079DE1F /* GpsTracker.swift */,
 				8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */,
+				8C23AE301EDE87FC00CD212A /* TrackedItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -222,13 +235,18 @@
 				8C473CB91ECD16580015F3B7 /* OverviewViewController.swift */,
 				8CA618E61ED39B12003F39D0 /* ReservationViewController.swift */,
 				8CA618E81ED39B49003F39D0 /* DelieveryViewController.swift */,
+				8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */,
+				8C2C56D81ED6FA490007375F /* DebugViewController.swift */,
+				8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */,
+				8C23AE321EDE8D2C00CD212A /* DashBoardSettingsTableViewController.swift */,
 				8CA618EA1ED39B88003F39D0 /* TimePickerViewController.swift */,
 				8CA618EE1ED408E7003F39D0 /* MapsViewController.swift */,
 				8C2C56CE1ED6524C0007375F /* StatePickerViewController.swift */,
-				8C2C56D01ED6E03F0007375F /* DashboardViewController.swift */,
-				8C2C56D41ED6E1740007375F /* DashBoardSettingsTableViewController.swift */,
-				8C2C56D81ED6FA490007375F /* DebugViewController.swift */,
-				8C2C56DD1ED6FF8F0007375F /* ItemTrackerViewController.swift */,
+				8C23AE2E1EDE478200CD212A /* ReserveDelieveryViewController.swift */,
+				8C33AD401EDD41C4001C5BD7 /* ReserveInstanceViewController.swift */,
+				8C33AD441EDD4729001C5BD7 /* ReservationDatePickerViewController.swift */,
+				8C33AD461EDD4739001C5BD7 /* ReservationInformationViewController.swift */,
+				8C33AD481EDD4756001C5BD7 /* ReservationRequestViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -523,22 +541,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA618E91ED39B49003F39D0 /* DelieveryViewController.swift in Sources */,
+				8C33AD491EDD4756001C5BD7 /* ReservationRequestViewController.swift in Sources */,
 				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
 				8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */,
 				8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */,
 				8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */,
 				8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */,
 				8CA618E51ED39429003F39D0 /* ReservationDate.swift in Sources */,
+				8C23AE2F1EDE478200CD212A /* ReserveDelieveryViewController.swift in Sources */,
+				8C23AE311EDE87FC00CD212A /* TrackedItem.swift in Sources */,
+				8C33AD411EDD41C4001C5BD7 /* ReserveInstanceViewController.swift in Sources */,
 				8CA618EB1ED39B88003F39D0 /* TimePickerViewController.swift in Sources */,
+				8C33AD451EDD4729001C5BD7 /* ReservationDatePickerViewController.swift in Sources */,
+				8C23AE331EDE8D2C00CD212A /* DashBoardSettingsTableViewController.swift in Sources */,
 				8CA618EF1ED408E7003F39D0 /* MapsViewController.swift in Sources */,
 				8C2C56D11ED6E03F0007375F /* DashboardViewController.swift in Sources */,
-				8C2C56D51ED6E1740007375F /* DashBoardSettingsTableViewController.swift in Sources */,
 				8C2C56D91ED6FA490007375F /* DebugViewController.swift in Sources */,
 				8C473C8E1ECD10BA0015F3B7 /* SigninViewController.swift in Sources */,
 				8CA618E31ED38D3A003F39D0 /* ReservationInstance.swift in Sources */,
 				8CA618E71ED39B12003F39D0 /* ReservationViewController.swift in Sources */,
 				8C42243F1ED707B20079DE1F /* GpsTrackerManager.swift in Sources */,
-				8C2C56D71ED6F2590007375F /* DeliveryInstance.swift in Sources */,
+				8C33AD471EDD4739001C5BD7 /* ReservationInformationViewController.swift in Sources */,
+				8C2C56D71ED6F2590007375F /* ReservationDelivery.swift in Sources */,
 				8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

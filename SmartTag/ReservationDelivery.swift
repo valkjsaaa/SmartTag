@@ -23,5 +23,5 @@ extension ReservationDelivery {
     @NSManaged public var type: ReservationType
     @NSManaged public var which: Int16
     @NSManaged public var date: ReservationDate?
-    
+    @NSManaged public var priorityCode: Int16
 }
