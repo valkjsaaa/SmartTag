@@ -9,7 +9,7 @@
 import UIKit
 
 class ReserveInstanceViewController: UIViewController {
-    var reserveInstance: ReservationInstance?
+    var reserveInstance: [ReservationInstance]?
     var delegate: MapsViewController?
     
     let embedReserveDatePickerViewSegueIdentifier = "embedReserveDatePickerView"
@@ -61,14 +61,16 @@ class ReserveInstanceViewController: UIViewController {
         var selectedInstances = [ReservationInstance]()
         for date in selectedDates {
             for instance in date.reservedInstances! {
-                if instance.x == reserveInstance!.x && instance.y == reserveInstance!.y {
-                    if instance.type != .Available {
-                        let alert = UIAlertController(title: "Region not available.", message: "Region is \(instance.type.description.lowercased()) at \(instance.date!.dateString!).", preferredStyle: .actionSheet)
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in }))
-                        self.present(alert, animated: true, completion: {})
-                        return
+                for anotherInstance in reserveInstance! {
+                    if instance.x == anotherInstance.x && instance.y == anotherInstance.y {
+                        if instance.type != .Available {
+                            let alert = UIAlertController(title: "Region not available.", message: "Region is \(instance.type.description.lowercased()) at \(instance.date!.dateString!).", preferredStyle: .actionSheet)
+                            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in }))
+                            self.present(alert, animated: true, completion: {})
+                            return
+                        }
+                        selectedInstances += [instance]
                     }
-                    selectedInstances += [instance]
                 }
             }
         }

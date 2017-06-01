@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="USH-MH-T7M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="USH-MH-T7M">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KR9-zp-MqJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.7421875" y="3165.625"/>
+            <point key="canvasLocation" x="861" y="2335"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="Kak-uV-x9m">
@@ -432,7 +432,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1477" y="3167"/>
+            <point key="canvasLocation" x="1866" y="2230"/>
         </scene>
         <!--Delivery Manage-->
         <scene sceneID="ovV-31-6Kb">
@@ -543,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsk-lg-ghm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="2329"/>
+            <point key="canvasLocation" x="861" y="3215"/>
         </scene>
         <!--Dash Board Settings Table View Controller-->
         <scene sceneID="VO2-xo-VNa">
@@ -702,6 +702,64 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Automatic Routing" id="7cm-fk-Afh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uw9-0t-9yd">
+                                        <rect key="frame" x="0.0" y="304" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uw9-0t-9yd" id="ARZ-nM-1lX">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXf-J1-dQH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Route"/>
+                                                    <connections>
+                                                        <action selector="startRouting:" destination="DXP-J7-oWh" eventType="touchUpInside" id="Obz-U8-P68"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H4g-n4-3Os">
+                                        <rect key="frame" x="0.0" y="348" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H4g-n4-3Os" id="wfu-re-VSi">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O2-Jn-AvK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Reserve"/>
+                                                    <connections>
+                                                        <action selector="reserve:" destination="DXP-J7-oWh" eventType="touchUpInside" id="uQ5-aL-MUB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GQJ-T8-coe">
+                                        <rect key="frame" x="0.0" y="392" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GQJ-T8-coe" id="VBH-lY-njf">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYA-BD-dbv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Clear Selection"/>
+                                                    <connections>
+                                                        <action selector="clearSelection:" destination="DXP-J7-oWh" eventType="touchUpInside" id="bm5-uS-Yi4"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="DXP-J7-oWh" id="1SS-hc-lq4"/>
@@ -712,15 +770,19 @@
                     <size key="freeformSize" width="300" height="768"/>
                     <connections>
                         <outlet property="addGridLinesSwitch" destination="68M-Us-l1V" id="fMY-P7-tx0"/>
+                        <outlet property="routingButton" destination="fXf-J1-dQH" id="1sO-Me-xO7"/>
                         <outlet property="showCriticalItemsSwitch" destination="H8u-eV-Dtg" id="YvE-4c-hla"/>
                         <outlet property="showItemsToMoveSwitch" destination="5EJ-mz-0mj" id="7WW-9M-ACA"/>
                         <outlet property="showMyItemsSwitch" destination="p7t-dU-s0W" id="R2K-qg-VyE"/>
                         <outlet property="showTrackedItems" destination="F2g-5U-Cc9" id="war-ut-Upq"/>
+                        <segue destination="1YI-el-fKP" kind="popoverPresentation" identifier="popupReserveInstanceViewController" popoverAnchorView="8O2-Jn-AvK" id="rwj-UW-CBk">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXb-VQ-S1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="2329"/>
+            <point key="canvasLocation" x="1491" y="3215"/>
         </scene>
         <!--Debug View Controller-->
         <scene sceneID="fdO-iN-Kh4">
@@ -785,8 +847,22 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-2p-5bD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        </imageView>
+                                                    </subviews>
                                                 </view>
                                                 <color key="backgroundColor" red="0.45589586278014316" green="1" blue="0.40063897829485218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="t9r-2p-5bD" secondAttribute="bottom" id="3oy-UO-ce0"/>
+                                                    <constraint firstItem="t9r-2p-5bD" firstAttribute="leading" secondItem="L4h-oh-K8r" secondAttribute="leading" id="GBq-Py-wK7"/>
+                                                    <constraint firstItem="t9r-2p-5bD" firstAttribute="top" secondItem="L4h-oh-K8r" secondAttribute="top" id="gnt-oa-OAi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="t9r-2p-5bD" secondAttribute="trailing" id="p0i-HX-0S0"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="checkImage" destination="t9r-2p-5bD" id="roy-qx-fhg"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
@@ -960,7 +1036,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfs-zk-QRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="3790"/>
+            <point key="canvasLocation" x="1491" y="4701"/>
         </scene>
         <!--Reserve Delievery View Controller-->
         <scene sceneID="m6k-kN-oFN">
@@ -1019,7 +1095,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qg-Go-uRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476.5625" y="4057.03125"/>
+            <point key="canvasLocation" x="1342" y="4701"/>
         </scene>
         <!--Reserve Instance View Controller-->
         <scene sceneID="bB0-ZE-aR6">
@@ -1110,7 +1186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgy-9L-01P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="4502"/>
+            <point key="canvasLocation" x="1491" y="3715"/>
         </scene>
         <!--Reservation Date Picker View Controller-->
         <scene sceneID="Enl-eS-u17">
@@ -1207,7 +1283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNK-ti-Qyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095.8984375" y="4223.4375"/>
+            <point key="canvasLocation" x="2184" y="3499"/>
         </scene>
         <!--Reservation Information View Controller-->
         <scene sceneID="njX-Z7-9xg">
@@ -1241,7 +1317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JS-pn-tiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095.8984375" y="4583.59375"/>
+            <point key="canvasLocation" x="2184" y="3906"/>
         </scene>
         <!--Reservation Request View Controller-->
         <scene sceneID="Hlt-Ak-CVO">
@@ -1273,7 +1349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmH-tD-R7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095.8984375" y="4940.625"/>
+            <point key="canvasLocation" x="2184" y="4327"/>
         </scene>
     </scenes>
     <resources>
@@ -1284,9 +1360,11 @@
         <image name="Overview" width="32" height="32"/>
         <image name="Reservation" width="32" height="32"/>
         <image name="Tracking" width="32" height="32"/>
+        <image name="check" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7TT-vb-aMJ"/>
         <segue reference="GHs-RR-Bdg"/>
+        <segue reference="7TT-vb-aMJ"/>
+        <segue reference="rwj-UW-CBk"/>
     </inferredMetricsTieBreakers>
 </document>

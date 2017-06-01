@@ -30,6 +30,7 @@ class MapsViewController: UIViewController {
     var deliverys: [ReservationDelivery?]?
     var allTrackedItems: [TrackedItem]!
     var trackedItems: [TrackedItem]!
+    var selectedGrids = [(Int, Int)]()
     
     public var date: ReservationDate? {
         set(newDate) {
@@ -203,7 +204,7 @@ class MapsViewController: UIViewController {
             let destination = segue.destination as! ReserveInstanceViewController
             let sender = sender as! MapCell
             destination.delegate = self
-            destination.reserveInstance = reservations![sender.index.0][sender.index.1]
+            destination.reserveInstance = [reservations![sender.index.0][sender.index.1]!]
         }
     }
     
@@ -212,6 +213,7 @@ class MapsViewController: UIViewController {
 }
 
 class MapCell: UICollectionViewCell {
+    @IBOutlet weak var checkImage: UIImageView!
     var index: (Int, Int)!
 }
 
@@ -220,12 +222,56 @@ class TrackerCell: UICollectionViewCell {
 }
 
 extension MapsViewController: UICollectionViewDelegate {
+    
+    func getGridViewCell(_ point: (Int, Int)) -> MapCell {
+        return self.gridLinesView.cellForItem(at: IndexPath(row: point.0 + cellColCount * point.1, section: 0))! as! MapCell
+    }
+    
+    func addSelectedGrid(point: (Int, Int)) {
+        let selectedCell = getGridViewCell(point)
+        selectedCell.checkImage.isHidden = false
+        if !checkGridSelected(point) {
+            selectedGrids.append(point)
+        }
+    }
+    
+    func removeSelectedGrid(point: (Int, Int)) {
+        let selectedCell = self.gridLinesView.cellForItem(at: IndexPath(row: point.0 + cellColCount * point.1, section: 0))! as! MapCell
+        selectedCell.checkImage.isHidden = true
+        if checkGridSelected(point){
+            if let index = selectedGrids.index(where: { (coordinate) -> Bool in
+                coordinate == selectedCell.index
+            }) {
+                selectedGrids.remove(at: index)
+            } else {
+                fatalError()
+            }
+        }
+    }
+    
+    func removeAllSelectedGrid() {
+        for point in selectedGrids {
+            removeSelectedGrid(point: point)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 0 {
-            let currentCell = collectionView.cellForItem(at: indexPath)!
-            statePickerAnchorPoint.center = CGPoint(x: currentCell.center.x + collectionView.contentOffset.x,
-                                                    y: currentCell.center.y + collectionView.contentOffset.y)
-            performSegue(withIdentifier: popupReserveInstanceViewControllerSegueIdentifier, sender: currentCell)
+            if self.delegate?.dashboard == true {
+                let currentCell = collectionView.cellForItem(at: indexPath)! as! MapCell
+                if currentCell.checkImage.isHidden {
+                    addSelectedGrid(point: currentCell.index)
+                } else {
+                    removeSelectedGrid(point: currentCell.index)
+                }
+                print(selectedGrids)
+                self.delegate?.refreshSelected?()
+            } else {
+                let currentCell = collectionView.cellForItem(at: indexPath)!
+                statePickerAnchorPoint.center = CGPoint(x: currentCell.center.x + collectionView.contentOffset.x,
+                                                        y: currentCell.center.y + collectionView.contentOffset.y)
+                performSegue(withIdentifier: popupReserveInstanceViewControllerSegueIdentifier, sender: currentCell)
+            }
         }
     }
 }
@@ -239,6 +285,17 @@ extension MapsViewController: UICollectionViewDataSource {
             return trackedItems!.count
         }
         fatalError()
+    }
+    
+    
+    func checkGridSelected(_ index: (Int, Int)) -> Bool {
+        var selected = false
+        for point in selectedGrids {
+            if point == index {
+                selected = true
+            }
+        }
+        return selected
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -260,6 +317,7 @@ extension MapsViewController: UICollectionViewDataSource {
             } else {
                 cell.backgroundColor = MapCellColor.Available
             }
+            cell.checkImage.isHidden = !checkGridSelected(cell.index)
             return cell
         } else if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: trackerCellIdentifier, for: indexPath) as! TrackerCell
@@ -307,6 +365,7 @@ class TrackerViewLayout: UICollectionViewLayout {
 }
 
 @objc protocol MapsViewDelegate {
+    @objc optional func refreshSelected()
     
     @objc optional var initialDate: ReservationDate {
         get

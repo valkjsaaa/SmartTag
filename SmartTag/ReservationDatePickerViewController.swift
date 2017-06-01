@@ -61,13 +61,13 @@ class ReservationDatePickerViewController: UIViewController {
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         availableDates = ReservationDate.getAllDatesSorted(context: managedObjectContext)
         
-        if let defaultIndex = availableDates.index(of: self.instanceController!.reserveInstance!.date!) {
+        if let defaultIndex = availableDates.index(of: self.instanceController!.reserveInstance![0].date!) {
             startDateIndex = defaultIndex
             endDateIndex = defaultIndex
             startDatePickerView.selectRow(startDateIndex, inComponent: 0, animated: false)
             endDatePickerView.selectRow(endDateIndex, inComponent: 0, animated: false)
         }
-        self.priorityCodeTextField.text = "\(self.instanceController!.reserveInstance!.priorityCode)"
+        self.priorityCodeTextField.text = "\(self.instanceController!.reserveInstance![0].priorityCode)"
     }
 
     override func didReceiveMemoryWarning() {

@@ -23,6 +23,7 @@
 		8C33AD451EDD4729001C5BD7 /* ReservationDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD441EDD4729001C5BD7 /* ReservationDatePickerViewController.swift */; };
 		8C33AD471EDD4739001C5BD7 /* ReservationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD461EDD4739001C5BD7 /* ReservationInformationViewController.swift */; };
 		8C33AD491EDD4756001C5BD7 /* ReservationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C33AD481EDD4756001C5BD7 /* ReservationRequestViewController.swift */; };
+		8C3EE2931EDF89A4008D721C /* ShortestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3EE2921EDF89A4008D721C /* ShortestPath.swift */; };
 		8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243C1ED703AB0079DE1F /* GpsTracker.swift */; };
 		8C42243F1ED707B20079DE1F /* GpsTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */; };
 		8C473C8C1ECD10BA0015F3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */; };
@@ -81,6 +82,7 @@
 		8C33AD441EDD4729001C5BD7 /* ReservationDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationDatePickerViewController.swift; sourceTree = "<group>"; };
 		8C33AD461EDD4739001C5BD7 /* ReservationInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInformationViewController.swift; sourceTree = "<group>"; };
 		8C33AD481EDD4756001C5BD7 /* ReservationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationRequestViewController.swift; sourceTree = "<group>"; };
+		8C3EE2921EDF89A4008D721C /* ShortestPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortestPath.swift; sourceTree = "<group>"; };
 		8C42243C1ED703AB0079DE1F /* GpsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTracker.swift; sourceTree = "<group>"; };
 		8C42243E1ED707B20079DE1F /* GpsTrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsTrackerManager.swift; sourceTree = "<group>"; };
 		8C473C881ECD10BA0015F3B7 /* SmartTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C3EE2941EDF8D00008D721C /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				8C3EE2921EDF89A4008D721C /* ShortestPath.swift */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
 		8C473C7F1ECD10BA0015F3B7 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 			children = (
 				8CA618E11ED38D25003F39D0 /* Controller */,
 				8CA618E01ED38D16003F39D0 /* Model */,
+				8C3EE2941EDF8D00008D721C /* Algorithms */,
 				8C473C8B1ECD10BA0015F3B7 /* AppDelegate.swift */,
 				8C473C8F1ECD10BA0015F3B7 /* Main.storyboard */,
 				8C473C921ECD10BA0015F3B7 /* Assets.xcassets */,
@@ -544,6 +555,7 @@
 				8C33AD491EDD4756001C5BD7 /* ReservationRequestViewController.swift in Sources */,
 				8C473CBA1ECD16580015F3B7 /* OverviewViewController.swift in Sources */,
 				8C42243D1ED703AB0079DE1F /* GpsTracker.swift in Sources */,
+				8C3EE2931EDF89A4008D721C /* ShortestPath.swift in Sources */,
 				8C2C56CF1ED6524C0007375F /* StatePickerViewController.swift in Sources */,
 				8C4A06D71ED2B326009FC6C4 /* DataModel.xcdatamodeld in Sources */,
 				8C2C56DE1ED6FF8F0007375F /* ItemTrackerViewController.swift in Sources */,

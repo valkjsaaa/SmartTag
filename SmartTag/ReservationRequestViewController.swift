@@ -18,7 +18,17 @@ class ReservationRequestViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        requestTextView.text = instanceController?.reserveInstance?.request
+        var sameText = true
+        for instance in instanceController!.reserveInstance! {
+            if instance.request != instanceController!.reserveInstance![0].request {
+                sameText = false
+            }
+        }
+        if sameText {
+            requestTextView.text = instanceController!.reserveInstance![0].request
+        } else {
+            requestTextView.text = "(Multiple Value)"
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,7 +18,22 @@ class ReservationInformationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        informationTextView.text = instanceController?.reserveInstance?.information ?? "No information available"
+        var sameText = true
+        for instance in instanceController!.reserveInstance! {
+            if instance.information != instanceController!.reserveInstance![0].information {
+                sameText = false
+            }
+        }
+        if sameText {
+            if instanceController!.reserveInstance![0].information != "" {
+                informationTextView.text = instanceController!.reserveInstance![0].information
+            } else {
+                informationTextView.text = "No information available"
+
+            }
+        } else {
+            informationTextView.text = "(Multiple Value)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
