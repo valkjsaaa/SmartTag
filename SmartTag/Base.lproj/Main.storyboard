@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2j-X2-4Zv">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="691"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="699"/>
                                 <connections>
                                     <segue destination="bkj-px-5AF" kind="embed" identifier="embedMapsViewController" id="GTK-jl-CC7"/>
                                 </connections>
@@ -153,7 +153,7 @@
                             <constraint firstItem="K2j-X2-4Zv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BMI-of-VXO"/>
                             <constraint firstItem="K2j-X2-4Zv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BYx-lY-Ug8"/>
                             <constraint firstAttribute="trailing" secondItem="K2j-X2-4Zv" secondAttribute="trailing" id="BxD-Fx-x6A"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K2j-X2-4Zv" secondAttribute="bottom" constant="8" id="Uk1-6Y-2q7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K2j-X2-4Zv" secondAttribute="bottom" id="Uk1-6Y-2q7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="Overview" id="X4w-Tv-SbC"/>
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waX-gE-O1m" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.7421875" y="893.75"/>
+            <point key="canvasLocation" x="861" y="2457"/>
         </scene>
         <!--Item Tracking-->
         <scene sceneID="pqM-b6-ywv">
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KR9-zp-MqJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="2335"/>
+            <point key="canvasLocation" x="861" y="906"/>
         </scene>
         <!--Time Picker View Controller-->
         <scene sceneID="Kak-uV-x9m">
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3Q-2f-Rab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="1213"/>
+            <point key="canvasLocation" x="1435" y="2546"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="1bB-0h-bPD">
@@ -432,7 +432,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1866" y="2230"/>
+            <point key="canvasLocation" x="1505" y="905"/>
         </scene>
         <!--Delivery Manage-->
         <scene sceneID="ovV-31-6Kb">
@@ -498,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdM-JH-Wtw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="1573"/>
+            <point key="canvasLocation" x="861" y="1745"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="gRx-0w-Jig">
@@ -512,14 +512,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDY-2P-rPt">
-                                <rect key="frame" x="0.0" y="20" width="724" height="691"/>
-                                <connections>
-                                    <segue destination="bkj-px-5AF" kind="embed" identifier="embedMapsViewController" id="hJs-j4-abg"/>
-                                </connections>
-                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br9-1y-LAT">
+                                <rect key="frame" x="0.0" y="20" width="724" height="655"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDY-2P-rPt">
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="655"/>
+                                        <connections>
+                                            <segue destination="bkj-px-5AF" kind="embed" identifier="embedMapsViewController" id="hJs-j4-abg"/>
+                                        </connections>
+                                    </containerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: MM/DD HH:MM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwk-wq-2d5">
+                                        <rect key="frame" x="536" y="8" width="168" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FDY-2P-rPt" secondAttribute="bottom" id="Efl-fR-INm"/>
+                                    <constraint firstItem="Fwk-wq-2d5" firstAttribute="top" secondItem="br9-1y-LAT" secondAttribute="top" constant="8" id="HdM-n5-avi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fwk-wq-2d5" secondAttribute="trailing" constant="20" id="Tdj-m5-Xng"/>
+                                    <constraint firstAttribute="trailing" secondItem="FDY-2P-rPt" secondAttribute="trailing" id="X9c-aV-EJi"/>
+                                    <constraint firstItem="FDY-2P-rPt" firstAttribute="leading" secondItem="br9-1y-LAT" secondAttribute="leading" id="jhq-1c-D3X"/>
+                                    <constraint firstItem="FDY-2P-rPt" firstAttribute="top" secondItem="br9-1y-LAT" secondAttribute="top" id="xSu-NH-Nrk"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOf-sC-ltR">
-                                <rect key="frame" x="724" y="20" width="300" height="691"/>
+                                <rect key="frame" x="724" y="20" width="300" height="655"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="H1E-ek-Znm"/>
                                 </constraints>
@@ -527,23 +547,48 @@
                                     <segue destination="DXP-J7-oWh" kind="embed" identifier="embedDashBoardSettingsView" id="mCV-kM-ne1"/>
                                 </connections>
                             </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak4-ll-CeK">
+                                <rect key="frame" x="0.0" y="675" width="1024" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="28J-dZ-fKu"/>
+                                    <barButtonItem title="Adjust Time" id="l4T-9y-SmK">
+                                        <connections>
+                                            <segue destination="5SB-4L-QqW" kind="popoverPresentation" identifier="presentTimePicker" popoverAnchorBarButtonItem="l4T-9y-SmK" id="mNG-Os-ReO">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Toggle Menu" id="YvY-pQ-9IJ">
+                                        <connections>
+                                            <action selector="toggleSettingsView:" destination="t3d-6D-v5a" id="qW3-Sa-5tP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EOf-sC-ltR" firstAttribute="leading" secondItem="FDY-2P-rPt" secondAttribute="trailing" id="G7H-2I-Jg9"/>
-                            <constraint firstItem="Fm0-D0-tzq" firstAttribute="top" secondItem="EOf-sC-ltR" secondAttribute="bottom" constant="8" id="IIM-yD-GSG"/>
-                            <constraint firstItem="Fm0-D0-tzq" firstAttribute="top" secondItem="FDY-2P-rPt" secondAttribute="bottom" constant="8" id="S9d-AU-C9J"/>
+                            <constraint firstItem="ak4-ll-CeK" firstAttribute="top" secondItem="EOf-sC-ltR" secondAttribute="bottom" id="Dru-bn-I0w"/>
+                            <constraint firstItem="br9-1y-LAT" firstAttribute="top" secondItem="ZLv-3g-xAu" secondAttribute="bottom" id="EUm-I3-9Gv"/>
+                            <constraint firstItem="Fm0-D0-tzq" firstAttribute="top" secondItem="ak4-ll-CeK" secondAttribute="bottom" id="KBy-iP-gb9"/>
+                            <constraint firstAttribute="trailing" secondItem="ak4-ll-CeK" secondAttribute="trailing" id="MIG-fs-gTP"/>
+                            <constraint firstItem="EOf-sC-ltR" firstAttribute="leading" secondItem="br9-1y-LAT" secondAttribute="trailing" id="Nyt-31-Igz"/>
+                            <constraint firstItem="ak4-ll-CeK" firstAttribute="leading" secondItem="nVb-Kj-Aa8" secondAttribute="leading" id="VmV-Ji-1dq"/>
                             <constraint firstAttribute="trailing" secondItem="EOf-sC-ltR" secondAttribute="trailing" id="Wm6-Zz-YXC"/>
-                            <constraint firstItem="FDY-2P-rPt" firstAttribute="top" secondItem="ZLv-3g-xAu" secondAttribute="bottom" id="mVY-O1-Set"/>
-                            <constraint firstItem="FDY-2P-rPt" firstAttribute="leading" secondItem="nVb-Kj-Aa8" secondAttribute="leading" id="sh8-7g-Cdg"/>
+                            <constraint firstItem="br9-1y-LAT" firstAttribute="leading" secondItem="nVb-Kj-Aa8" secondAttribute="leading" id="o5a-eK-2BA"/>
+                            <constraint firstItem="ak4-ll-CeK" firstAttribute="top" secondItem="br9-1y-LAT" secondAttribute="bottom" id="oZK-x6-VGS"/>
                             <constraint firstItem="EOf-sC-ltR" firstAttribute="top" secondItem="ZLv-3g-xAu" secondAttribute="bottom" id="xZw-0Z-8db"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard" id="8tm-dH-2bu"/>
+                    <connections>
+                        <outlet property="settingsViewWidth" destination="Wm6-Zz-YXC" id="Zew-cS-xCo"/>
+                        <outlet property="timeLabel" destination="Fwk-wq-2d5" id="heF-r6-tvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsk-lg-ghm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="3215"/>
+            <point key="canvasLocation" x="860.7421875" y="3214.84375"/>
         </scene>
         <!--Dash Board Settings Table View Controller-->
         <scene sceneID="VO2-xo-VNa">
@@ -1363,8 +1408,8 @@
         <image name="check" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GHs-RR-Bdg"/>
-        <segue reference="7TT-vb-aMJ"/>
+        <segue reference="mNG-Os-ReO"/>
+        <segue reference="hJs-j4-abg"/>
         <segue reference="rwj-UW-CBk"/>
     </inferredMetricsTieBreakers>
 </document>

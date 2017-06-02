@@ -10,8 +10,14 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var settingsViewWidth: NSLayoutConstraint!
+
+    let presentTimePickerSegueIdentifier = "presentTimePicker"
     let embedDashBoardSettingsViewSegueIdentifier = "embedDashBoardSettingsView"
     let embedMapsViewControllerSegueIdentifier = "embedMapsViewController"
+    
+    let settingsViewDefaultWidth = 300
     
     var mapsViewController: MapsViewController!
     var settingsViewController: DashBoardSettingsTableViewController!
@@ -22,11 +28,35 @@ class DashboardViewController: UIViewController {
     var internalAddGridLines = false
     var internalShowItems = false
     var internalRoutingEnabled = true
+    var internalSettingsViewShown = true
+    
+    var settingsViewShown: Bool {
+        get {
+            return internalSettingsViewShown
+        }
+        set(newSettingsViewShown) {
+            if internalSettingsViewShown != newSettingsViewShown {
+                internalSettingsViewShown = newSettingsViewShown
+                if internalSettingsViewShown {
+                    settingsViewWidth.constant = 0
+                } else {
+                    settingsViewWidth.constant = -CGFloat(settingsViewDefaultWidth)
+                }
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
+    }
+    
+    var currentDate: ReservationDate?;
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        selectedDate = ReservationDate.getAllDatesSorted(context: managedObjectContext)[0]
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +64,10 @@ class DashboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func toggleSettingsView(_ sender: UIButton) {
+        self.settingsViewShown = !self.settingsViewShown
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -49,6 +83,11 @@ class DashboardViewController: UIViewController {
             mapsViewController = segue.destination as! MapsViewController
             mapsViewController.delegate = self
         }
+        if segue.identifier == presentTimePickerSegueIdentifier {
+            if let timePickerViewController = segue.destination as? TimePickerViewController {
+                timePickerViewController.delegate = self
+            }
+        }
     }
 
 }
@@ -62,6 +101,10 @@ extension DashboardViewController: MapsViewDelegate {
             internalRoutingEnabled = false
 //            settingsViewController.routingButton.isEnabled = false
         }
+    }
+    
+    var initialDate: ReservationDate {
+        return self.currentDate!
     }
 }
 
@@ -155,3 +198,24 @@ extension DashboardViewController: DashBoardSettingsTableViewDelegate {
         }
     }
 }
+
+extension DashboardViewController: TimePickerDelegate {
+    var selectedDate: ReservationDate? {
+        get {
+            return self.currentDate
+        }
+        set(newDate) {
+            var dateString: String! {
+                if let dateString = newDate?.dateString {
+                    return dateString
+                } else {
+                    return "Not Available"
+                }
+            }
+            timeLabel.text = "Time: " + dateString
+            self.currentDate = newDate
+            self.mapsViewController.date = newDate
+        }
+    }
+}
+

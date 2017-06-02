@@ -267,10 +267,22 @@ extension MapsViewController: UICollectionViewDelegate {
                 print(selectedGrids)
                 self.delegate?.refreshSelected?()
             } else {
-                let currentCell = collectionView.cellForItem(at: indexPath)!
-                statePickerAnchorPoint.center = CGPoint(x: currentCell.center.x + collectionView.contentOffset.x,
-                                                        y: currentCell.center.y + collectionView.contentOffset.y)
-                performSegue(withIdentifier: popupReserveInstanceViewControllerSegueIdentifier, sender: currentCell)
+                let currentCell = collectionView.cellForItem(at: indexPath)! as! MapCell
+                if reservations![currentCell.index.0][currentCell.index.1]!.type == .Reserved {
+                    let alert = UIAlertController(title: "Confirm", message: "Do you want to cancel this reservation?", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
+                        currentCell.backgroundColor = MapCellColor.Available
+                        self.reservations![currentCell.index.0][currentCell.index.1]!.type = .Available
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                    }))
+                    self.present(alert, animated: true, completion: {})
+                    return
+                } else {
+                    statePickerAnchorPoint.center = CGPoint(x: currentCell.center.x + collectionView.contentOffset.x,
+                                                            y: currentCell.center.y + collectionView.contentOffset.y)
+                    performSegue(withIdentifier: popupReserveInstanceViewControllerSegueIdentifier, sender: currentCell)
+                }
             }
         }
     }
